@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 import tweepy
 import os
 
-os.system("sh creds.sh") ## this sets up my credentials locally
+os.system("source creds.sh") ## this sets up my credentials locally
 consumerKey = os.environ.get('CONSUMER_KEY')
 consumerSecret = os.environ.get('CONSUMER_SECRET')
 accessToken = os.environ.get('ACCESS_TOKEN')
