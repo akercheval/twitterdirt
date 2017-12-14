@@ -49,16 +49,13 @@ for friend in tweepy.Cursor(api.friends).items():
 print("Calculating differences...")
 print()
 print()
-if len(past_followers) > len(present_followers):
-    for elem in past_followers:
-        if elem not in present_followers:
-            print(elem, "unfollowed you!")
-elif len(present_followers) > len(past_followers):
-    for elem in present_followers:
-        if elem not in past_followers:
-            print(elem, "followed you!")
-else:
-    print("No change in followers/following since last time you checked")
+for elem in past_followers:
+    if elem not in present_followers:
+    	print(elem, "unfollowed you!")
+print()
+for elem in present_followers:
+    if elem not in past_followers:
+    	print(elem, "followed you!")
 
 print()
 print()
